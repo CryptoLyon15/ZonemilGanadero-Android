@@ -17,4 +17,4 @@ usuarios y roles, historial, PDF (imprimir / guardar como PDF) y Excel (CSV).
 ## Firma
 `app/zonemil.keystore` (clave `zonemil2026`, alias `zonemil`) firma todas las versiones, para que las
 actualizaciones se instalen encima sin perder datos. Guarde una copia: si se pierde, las nuevas versiones
-no se podrán instalar sobre la anterior. Opcional: definir los secretos KEYSTORE_PASSWORD y KEY_PASSWORD.
+no se podrán instalar sobre la anterior. Opcional: definir los secretos KEYSTORE_PASSWORD y KEY_PASSWORD..
