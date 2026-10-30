@@ -1,0 +1,41 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "com.zonemil.ganadero"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.zonemil.ganadero"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("zonemil.keystore")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: "zonemil2026"
+            keyAlias "zonemil"
+            keyPassword System.getenv("KEY_PASSWORD") ?: "zonemil2026"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core:1.13.1"
+}
